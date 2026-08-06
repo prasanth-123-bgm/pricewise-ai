@@ -1,0 +1,12 @@
+{
+  "name": "pricewise-ai-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Workspace launcher for separate PriceWise AI frontend and backend apps",
+  "scripts": {
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "npm --prefix backend run dev",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend run start"
+  }
+}

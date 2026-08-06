@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PriceWise AI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="background-glow background-glow-left"></div>
+    <div class="background-glow background-glow-right"></div>
+
+    <main class="app-shell">
+      <section class="hero">
+        <p class="eyebrow">Price Comparison Engine</p>
+        <h1>Search once. Compare Amazon and Flipkart instantly.</h1>
+        <p class="hero-copy">
+          Built for quick pricing decisions with clean backend aggregation, caching,
+          and fault-tolerant provider handling.
+        </p>
+      </section>
+
+      <section class="search-panel">
+        <form id="searchForm" class="search-form">
+          <label class="search-label" for="productInput">Product</label>
+          <div class="search-row">
+            <input
+              id="productInput"
+              name="product"
+              type="text"
+              placeholder="Try iPhone 13, AirPods Pro, Samsung S23..."
+              autocomplete="off"
+              required
+            />
+            <button id="searchButton" type="submit">Compare Prices</button>
+          </div>
+        </form>
+
+        <div id="status" class="status" aria-live="polite"></div>
+      </section>
+
+      <section id="resultsSection" class="results-section hidden">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Search Results</p>
+            <h2 id="resultsTitle">Marketplace Comparison</h2>
+          </div>
+          <div id="cacheBadge" class="cache-badge"></div>
+        </div>
+
+        <div class="market-grid">
+          <article class="market-column">
+            <div class="market-head">
+              <h3>Amazon</h3>
+              <p id="amazonError" class="market-error"></p>
+            </div>
+            <div id="amazonResults" class="cards"></div>
+          </article>
+
+          <article class="market-column">
+            <div class="market-head">
+              <h3>Flipkart</h3>
+              <p id="flipkartError" class="market-error"></p>
+            </div>
+            <div id="flipkartResults" class="cards"></div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,21 @@
+{
+  "name": "pricewise-ai-backend",
+  "version": "1.0.0",
+  "description": "Backend API for marketplace comparison",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "keywords": [
+    "price-comparison",
+    "rapidapi",
+    "express",
+    "backend"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2"
+  }
+}
